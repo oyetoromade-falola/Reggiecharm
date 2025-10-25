@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reggie's Closet - Trendy Accessories & More</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fdfdfd;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: linear-gradient(90deg, #FF7F11, #28A745);
+    }
+    .nav-link {
+      color: #fff !important;
+      font-weight: 600;
+    }
+    .nav-link:hover {
+      color: #FFD700 !important;
+    }
+
+    /* Hero Banner */
+    .hero {
+      background: url('img/hero-banner.jpg') center center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 6rem 1rem;
+      position: relative;
+    }
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      text-shadow: 1px 1px 8px rgba(0,0,0,0.5);
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      text-shadow: 1px 1px 6px rgba(0,0,0,0.5);
+    }
+    .btn-shop {
+      background: #FFD700;
+      color: #000;
+      font-weight: 600;
+      padding: 0.75rem 2rem;
+      border-radius: 50px;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+    .btn-shop:hover {
+      transform: scale(1.1);
+      background: #FFC107;
+    }
+
+    /* Product Cards */
+    .products-section {
+      padding: 4rem 1rem;
+      text-align: center;
+    }
+    .products-section h2 {
+      color: #28A745;
+      font-weight: 700;
+      margin-bottom: 3rem;
+    }
+    .product-card {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      padding: 1rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+    .product-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+    .product-card h5 {
+      font-weight: 600;
+      color: #FF7F11;
+      margin-bottom: 0.5rem;
+    }
+    .product-card p {
+      font-weight: 500;
+      color: #333;
+      margin-bottom: 1rem;
+    }
+    .btn-add {
+      background: #28A745;
+      color: #fff;
+      border: none;
+      padding: 0.5rem 1.2rem;
+      border-radius: 30px;
+      transition: transform 0.2s ease, background 0.3s ease;
+    }
+    .btn-add:hover {
+      transform: scale(1.05);
+      background: #20c933;
+    }
+
+    /* Footer */
+    footer {
+      background: linear-gradient(90deg, #FF7F11, #28A745);
+      color: #fff;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    footer a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      margin: 0 0.5rem;
+    }
+    footer a:hover {
+      color: #FFD700;
+      text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media(max-width:768px){
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Reggie's Closet</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Banner -->
+<section class="hero">
+  <div class="container">
+    <h1>Trendy Accessories, Fashion & Body Care</h1>
+    <p>Shop the latest styles and essentials online, delivered straight to you!</p>
+    <a href="#products" class="btn btn-shop">Shop Now</a>
+  </div>
+</section>
+
+<!-- Products Section -->
+<section class="products-section" id="products">
+  <div class="container">
+    <h2>Our Products</h2>
+    <div class="row g-4 justify-content-center">
+
+      <!-- Product Card Example -->
+      <div class="col-md-3 col-6">
+        <div class="product-card">
+          <img src="img/products/bag1.jpg" alt="Trendy Bag">
+          <h5>Stylish Bag</h5>
+          <p>₦2,500</p>
+          <button class="btn-add" onclick="addToCart('Stylish Bag', 2500)">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-6">
+        <div class="product-card">
+          <img src="img/products/dress1.jpg" alt="Female Dress">
+          <h5>Elegant Dress</h5>
+          <p>₦3,500</p>
+          <button class="btn-add" onclick="addToCart('Elegant Dress', 3500)">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-6">
+        <div class="product-card">
+          <img src="img/products/bodycare1.jpg" alt="Body Lotion">
+          <h5>Body Lotion</h5>
+          <p>₦1,500</p>
+          <button class="btn-add" onclick="addToCart('Body Lotion', 1500)">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Add more products as needed -->
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="products-section" id="contact">
+  <div class="container text-center">
+    <h2>Contact / Order</h2>
+    <p>WhatsApp or Email your order and we’ll deliver it!</p>
+    <a href="https://wa.me/2347089987594" class="btn btn-shop">Order via WhatsApp</a>
+    <p class="mt-2">Email: <a href="mailto:falolaoyetoromade@gmail.com">falolaoyetoromade@gmail.com</a></p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 Reggie's Closet | Follow us on 
+    <a href="https://instagram.com/yourprofile" target="_blank">Instagram</a> | 
+    <a href="https://wa.me/2347089987594" target="_blank">WhatsApp</a>
+  </p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  function addToCart(name, price) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let found = cart.find(item => item.name === name);
+    if (found) {
+      found.qty += 1;
+    } else {
+      cart.push({ name, price, qty: 1 });
+    }
+    localStorage.setItem('cart', JSON.stringify(cart));
+    alert(name + " added to cart!");
+  }
+</script>
+
+</body>
+</html>
